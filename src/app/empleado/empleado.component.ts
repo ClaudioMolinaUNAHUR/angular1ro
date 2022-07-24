@@ -14,10 +14,17 @@ export class EmpleadoComponent implements OnInit {
   nombre = "Andres";
   apellido = "Molina";
   edad=32;
-  empresa = "a";
-
+  empresa = "";
+  deshabilitar=true;
+  registrado=true;
   esMayor(num: number){return num >= 18 ? "es mayor": "es menor"  }
 
+  setEmpresa(){
+    if (this.registrado){
+      this.deshabilitar = false
+    }
+  }
+  
   constructor() { }
 
   ngOnInit(): void {

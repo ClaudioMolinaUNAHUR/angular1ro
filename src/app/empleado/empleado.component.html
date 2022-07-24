@@ -1,9 +1,11 @@
 <p>nombre Empleado: {{nombre}}</p>
 <p>apellido Empleado: {{apellido}}</p>
 <p>edad Empleado: {{esMayor(edad)}}</p>
-<p>empresa Empleado: {{empresa.value}}</p>
+<p>empresa Empleado: {{empresa.value}}</p> 
 <div>
-    Introduce la empresa: <input type="text" placeholder="introduce empresa" #empresa (keyup)="0">
+    Introduce la empresa: <input type="text" placeholder="introduce empresa" #empresa (keyup)="0" [disabled]="deshabilitar">
+    <!-- <button textContent="Dale" (click)="getEmpresa(empresa.value)"></button> BOTON funcion vacia para retornar valor solamente-->
 </div>
-
-
+<br/>
+Registrado: <input type="checkbox" id="registro" [checked]="registrado">
+{{setEmpresa()}}
