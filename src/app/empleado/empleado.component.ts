@@ -14,7 +14,7 @@ export class EmpleadoComponent implements OnInit {
   nombre = "Andres";
   apellido = "Molina";
   edad=32;
-  empresa = "net";
+  empresa = "a";
 
   esMayor(num: number){return num >= 18 ? "es mayor": "es menor"  }
 

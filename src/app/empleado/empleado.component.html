@@ -1,5 +1,9 @@
 <p>nombre Empleado: {{nombre}}</p>
 <p>apellido Empleado: {{apellido}}</p>
 <p>edad Empleado: {{esMayor(edad)}}</p>
-<p>empresa Empleado: {{empresa}}</p>
+<p>empresa Empleado: {{empresa.value}}</p>
+<div>
+    Introduce la empresa: <input type="text" placeholder="introduce empresa" #empresa (keyup)="0">
+</div>
+
 
