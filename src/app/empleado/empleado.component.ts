@@ -15,18 +15,11 @@ export class EmpleadoComponent implements OnInit {
   apellido = "Molina";
   edad=32;
   empresa = "";
-  deshabilitar=true;
+  deshabilitar=false;
   registrado=false;
   textoDeRegistro="";
   esMayor(num: number){return num >= 18 ? "es mayor": "es menor"  }
 
-  setEmpresa(value: string){
-    this.deshabilitar = true;
-    if (this.registrado){
-      this.deshabilitar = false;
-      this.empresa = value;
-    }
-  }
 
   setUserRegistrado(event: Event){
     if((<HTMLInputElement>event.target).value == "no"){

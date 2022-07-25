@@ -3,13 +3,14 @@
 <p>edad Empleado: {{esMayor(edad)}}</p>
 <p>empresa Empleado: {{empresa}}</p> 
 <div>
-    Introduce la empresa: <input type="text" placeholder="introduce empresa" #empresaSet (keyup)="0" [disabled]="deshabilitar">
+    <!-- Introduce la empresa: <input type="text" placeholder="inng troduce empresa" #empresaSet (keyup)="0" [disabled]="deshabilitar"> -->
     <!-- <button textContent="Dale" (click)="getEmpresa(empresa.value)"></button> BOTON funcion vacia para retornar valor solamente-->
     <!-- (keyup) era para hacer que se llene empresa directamente al levantar una tecla -->
+    Introduce la empresa: <input type="text" placeholder="introduce empresa" [(ngModel)]="empresa" >
 </div>
 <br/>
 {{textoDeRegistro}}
 <br/>
 Registrado: <input type="radio" value="si" name="nRegistro" [checked]="registrado" (click)="setUserRegistrado($event)"><br/>
-No Registrado: <input type="radio" value="no" name="nRegistro"  (click)="setUserRegistrado($event)"><br/>
-Listo <button (click)="setEmpresa(empresaSet.value)" >Dale</button>
+No Registrado: <input type="radio" value="no" name="nRegistro"  (click)="setUserRegistrado($event)">
+<button class="btn btn-danger">Dale</button>
