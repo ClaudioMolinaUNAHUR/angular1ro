@@ -21,20 +21,20 @@ export class EmpleadoComponent implements OnInit {
   esMayor(num: number){return num >= 18 ? "es mayor": "es menor"  }
 
   setEmpresa(value: string){
-    this.deshabilitar = true
+    this.deshabilitar = true;
     if (this.registrado){
-      this.deshabilitar = false
-      this.empresa = value
+      this.deshabilitar = false;
+      this.empresa = value;
     }
   }
 
   setUserRegistrado(event: Event){
     if((<HTMLInputElement>event.target).value == "no"){
-      this.textoDeRegistro="no hay nadie registrado"
-      this.registrado = false
+      this.textoDeRegistro="no hay nadie registrado";
+      this.registrado = false;
     }else if((<HTMLInputElement>event.target).value == "si"){
-      this.textoDeRegistro="usuario registrado"
-      this.registrado = true
+      this.textoDeRegistro="usuario registrado";
+      this.registrado = true;
     }
   }
   
